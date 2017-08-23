@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 2.8)
+
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_C_STANDARD 99)
+
+add_executable(4-adjacent 4-adjacent/4-adjacent.cpp)
+add_executable(bugged bugged/bugged.cpp)
+add_executable(cat-snuke-and-a-voyage cat-snuke-and-a-voyage/cat-snuke-and-a-voyage.cpp)
+add_executable(coloring-dominoes coloring-dominoes/coloring-dominoes.cpp)
+add_executable(grid-coloring grid-coloring/grid-coloring.cpp)
+add_executable(i18n i18n/i18n.cpp)
+add_executable(k-city k-city/k-city.cpp)
+add_executable(make-a-rectangle make-a-rectangle/make-a-rectangle.cpp)
+add_executable(multiple-clocks multiple-clocks/multiple-clocks.cpp)
+add_executable(restricted restricted/restricted.cpp)
+add_executable(transit-tree-path transit-tree-path/transit-tree-path.cpp)
+add_executable(two-switches two-switches/two-switches.cpp)
+add_executable(varied varied/varied.cpp)
