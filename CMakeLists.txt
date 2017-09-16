@@ -5,6 +5,7 @@ set(CMAKE_C_STANDARD 99)
 
 add_executable(4-adjacent 4-adjacent/4-adjacent.cpp)
 add_executable(between-two-integers between-two-integers/between-two-integers.cpp)
+add_executable(big-array big-array/big-array.cpp)
 add_executable(bugged bugged/bugged.cpp)
 add_executable(cat-snuke-and-a-voyage cat-snuke-and-a-voyage/cat-snuke-and-a-voyage.cpp)
 add_executable(coloring-dominoes coloring-dominoes/coloring-dominoes.cpp)
