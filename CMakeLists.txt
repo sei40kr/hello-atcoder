@@ -8,6 +8,7 @@ add_executable(between-two-integers between-two-integers/between-two-integers.cp
 add_executable(bugged bugged/bugged.cpp)
 add_executable(cat-snuke-and-a-voyage cat-snuke-and-a-voyage/cat-snuke-and-a-voyage.cpp)
 add_executable(coloring-dominoes coloring-dominoes/coloring-dominoes.cpp)
+add_executable(counting-roads counting-roads/counting-roads.cpp)
 add_executable(derangement derangement/derangement.cpp)
 add_executable(fountain-walk fountain-walk/fountain-walk.cpp)
 add_executable(grid-coloring grid-coloring/grid-coloring.cpp)
