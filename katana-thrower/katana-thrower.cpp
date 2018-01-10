@@ -39,7 +39,7 @@ int main() {
   }
 
   if (0 < H) {
-    ans += ceil((double)H / a_max);
+    ans += ceil(static_cast<double>(H) / a_max);
   }
 
   cout << ans << endl;
