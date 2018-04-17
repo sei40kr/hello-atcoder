@@ -1,4 +1,4 @@
--- shift-only.hs ---
+-- shift-only.hs --- Shift Only
 
 -- author: Seong Yong-ju <sei40kr@gmail.com>
 
