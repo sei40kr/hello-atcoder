@@ -1,0 +1,2 @@
+* TODO Setup environment for Python
+* TODO Setup environment for Rust
