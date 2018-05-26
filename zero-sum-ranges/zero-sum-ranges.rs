@@ -58,7 +58,7 @@ macro_rules! get {
 #[allow(unused_macros)]
 macro_rules! debug {
     ($($a:expr),*) => {
-        eprintln!(concat!($(stringify!($a), " = {:?}, "),*), $($a),*);
+        println!(concat!($(stringify!($a), " = {:?}, "),*), $($a),*);
     }
 }
 
@@ -86,25 +86,27 @@ fn main() {
     let n = get!(usize);
     let xs = (0..n).map(|_| read::<i32>()).collect::<Vec<_>>();
 
-    let mut map = BTreeMap::<i32, u64>::new();
+    let mut map = BTreeMap::<i64, u64>::new();
     map.insert(0, 1);
-    let mut sum = 0;
+    let mut sum = 0i64;
 
-    let mut ans = 0u64;
-
-    xs.iter()
-        .map(|x| {
-            sum += x;
+    let ans = xs
+        .iter()
+        .map(|&x| {
+            sum += x as i64;
             sum
         })
-        .for_each(|s| {
-            let v = *(map.get(&s).unwrap_or(&0)) + 1;
+        .map(|s| {
+            let v = map.get(&s).unwrap_or(&0) + 1;
             map.insert(s, v);
 
             if 1 < v {
-                ans += v - 1;
+                v - 1
+            } else {
+                0
             }
-        });
+        })
+        .fold(0, |ans, v| ans + v);
 
     with_bufwriter(|mut out| writeln!(out, "{}", ans).unwrap());
 }
