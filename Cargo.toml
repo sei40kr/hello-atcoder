@@ -1,6 +1,0 @@
-[package]
-name = "hello-atcoder"
-version = "0.1.0"
-authors = ["Seong Yong-ju <sei40kr@gmail.com>"]
-
-[dependencies]
