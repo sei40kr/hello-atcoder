@@ -1,2 +1,4 @@
-* TODO Setup environment for Python
-* TODO Setup environment for Rust
+* DONE Setup environment for Python
+  CLOSED: [2018-06-17 Sun 01:28]
+* DONE Setup environment for Rust
+  CLOSED: [2018-06-17 Sun 01:28]
