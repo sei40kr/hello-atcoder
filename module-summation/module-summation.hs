@@ -1,4 +1,4 @@
--- module-summation.hs ---
+-- module-summation.hs --- Modulo Summation
 
 -- author: Seong Yong-ju <sei40kr@gmail.com>
 
