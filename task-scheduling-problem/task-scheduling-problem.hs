@@ -1,6 +1,6 @@
 import           Data.List
 
--- task-scheduling-problem.hs ---
+-- task-scheduling-problem.hs --- Task Scheduling Problem
 
 -- author: Seong Yong-ju <sei40kr@gmail.com>
 
