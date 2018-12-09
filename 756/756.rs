@@ -83,7 +83,7 @@ fn main() {
     input! {
       n:i32
     }
-    let mut e = vec![0i32; n as usize];
+    let mut e = vec![0i32; (n + 1) as usize];
 
     for mut i in 2..n + 1 {
         for j in 2..i + 1 {
@@ -99,7 +99,5 @@ fn main() {
         + num(&e, 15) * (num(&e, 5) - 1)
         + num(&e, 5) * (num(&e, 5) - 1) * (num(&e, 3) - 2) / 2;
 
-    with_bufwriter(|mut out| {
-        writeln!(out, "{}", ans);
-    });
+    with_bufwriter(|mut out| writeln!(out, "{}", ans).unwrap());
 }
