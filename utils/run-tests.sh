@@ -38,7 +38,7 @@ EOM
 		break
 	fi
 
-	if diff -q "$buffile" "$outfile" >/dev/null; then
+	if diff -aq --strip-trailing-cr "$buffile" "$outfile" >/dev/null; then
 		echo "${bold}${green}ok${reset}"
 	else
 		cat <<EOM
