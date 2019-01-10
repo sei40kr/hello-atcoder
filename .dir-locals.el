@@ -21,7 +21,7 @@
                              (cons :exec
                                (list
                                  "%c run --install 1.15.1 rustc %o -o %e %s"
-                                 (concat (projectile-project-root) "utils/run-tests.sh %e %a")))
+                                 (concat (projectile-project-root) "utils/run-tests.sh env RUST_BACKTRACE=1 %e %a")))
                              '(:compile-only . "%c run --install 1.15.1 rustc %o -o %e %s")
                              '(:remove . ("%e"))
                              '(:description . "Compile rust and execute via rustup")))))))
