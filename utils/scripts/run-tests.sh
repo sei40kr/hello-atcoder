@@ -18,9 +18,10 @@ errfile="$(mktemp)"
 
 shopt -s nullglob
 
-for infile in input-*.txt; do
-	outfile="output-${infile:6}"
-	if [[ ! -f $outfile ]]; then
+for infile in in_*.txt; do
+	outfile="out_${infile:3}"
+
+	if [[ ! -f "$outfile" ]]; then
 		continue
 	fi
 
@@ -31,7 +32,7 @@ for infile in input-*.txt; do
 		cat <<EOM
 ${bold}${red}err${reset}
 
-error output:
+runtime error:
 $(cat "$errfile")
 
 EOM
