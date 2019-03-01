@@ -1,4 +1,0 @@
-* DONE Setup environment for Python
-  CLOSED: [2018-06-17 Sun 01:28]
-* DONE Setup environment for Rust
-  CLOSED: [2018-06-17 Sun 01:28]
