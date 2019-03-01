@@ -10,7 +10,7 @@
                               (cons :exec
                                 (list
                                   "%c ghc -- %o -o %e %s"
-                                  (concat (projectile-project-root) "utils/scripts/run-tests.sh %e %a")))
+                                  "atcoder-tools test --exec %e"))
                               '(:compile-only . "%c ghc -- %o -o %e %s")
                               '(:remove "%e")
                               '(:description . "Compile Haskell file and execute via stack ghc"))))))
@@ -21,7 +21,7 @@
                              (cons :exec
                                (list
                                  "%c run --install 1.15.1 rustc %o -o %e %s"
-                                 (concat (projectile-project-root) "utils/scripts/run-tests.sh env RUST_BACKTRACE=1 %e %a")))
+                                 "env RUST_BACKTRACE=1 atcoder-tools test --exec %e"))
                              '(:compile-only . "%c run --install 1.15.1 rustc %o -o %e %s")
                              '(:remove . ("%e"))
                              '(:description . "Compile rust and execute via rustup")))))))
