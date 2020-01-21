@@ -4,24 +4,12 @@
 
 ;; Author: Seong Yong-ju <sei40kr@gmail.com>
 
-((haskell-mode . ((eval . (setq quickrun-option-cmd-alist
-                            (list
-                              '(:command . "stack")
-                              (cons :exec
-                                (list
-                                  "%c ghc -- %o -o %e %s"
-                                  "atcoder-tools test --exec %e"))
-                              '(:compile-only . "%c ghc -- %o -o %e %s")
-                              '(:remove "%e")
-                              '(:description . "Compile Haskell file and execute via stack ghc"))))))
-  (rust-mode . ((racer-rust-src-path . "~/.rustup/toolchains/1.15.1-x86_64-apple-darwin/lib/rustlib/src/rust/src")
-                 (eval . (setq quickrun-option-cmd-alist
-                           (list
-                             '(:command . "rustup")
-                             (cons :exec
-                               (list
-                                 "%c run --install 1.15.1 rustc %o -o %e %s"
-                                 "env RUST_BACKTRACE=1 atcoder-tools test --exec %e"))
-                             '(:compile-only . "%c run --install 1.15.1 rustc %o -o %e %s")
-                             '(:remove . ("%e"))
-                             '(:description . "Compile rust and execute via rustup")))))))
+((rustic-mode
+  . ((rustic-racer-rust-src-path . "~/.rustup/toolchains/1.15.1-x86_64-apple-darwin/lib/rustlib/src/rust/src")
+     (quickrun-option-cmd-alist
+      . ((:command . "rustup")
+         (:exec    . ("%c run --install 1.15.1 rustc %o -O -o %e %s"
+                      "RUST_BACKTRACE=1 atcoder-tools test -e %e -d %d"))
+         (:remove . ("%e"))
+         (:tempfile . nil)
+         (:description . "Compile Rust file with Rustup/rustc and test with atcoder-tools"))))))
